@@ -6,7 +6,7 @@
 /*   By: gallard <gallard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/09/27 16:13:55 by gallard           #+#    #+#             */
-/*   Updated: 2015/02/03 15:09:30 by glafitte         ###   ########.fr       */
+/*   Updated: 2015/02/03 16:20:19 by glafitte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ int		main(void)
 	{
 		srand(time(0));
 		// Block: Human
+		/*
 		printf("1234567\nJouer [1-7]: ");
 		scanf("%d", &move);
 		--move;
@@ -44,15 +45,27 @@ int		main(void)
 			break ;
 		}
 		i++;
-
-		// Block: AI
+		*/
+		// Block: AI1
 		puts("Au ROUGE (votre IA):");
+		move = p4_getmove_ia(&grid, ROUGE, i);
+		p4_play(&grid, move, ROUGE);
+		p4_disp(&grid);
+		if (p4_won(&grid, move))
+		{
+			puts("COMPUTER A1 - WON!");
+			break ;
+		}
+		i++;
+
+		// Block: AI2
+		puts("Au JAUNE (votre IA):");
 		move = p4_getmove_yourlogin(&grid, ROUGE, i);
 		p4_play(&grid, move, ROUGE);
 		p4_disp(&grid);
 		if (p4_won(&grid, move))
 		{
-			puts("COMPUTER WON!");
+			puts("COMPUTER IA DE FOU WON!");
 			break ;
 		}
 		i++;
