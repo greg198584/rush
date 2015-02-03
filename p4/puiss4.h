@@ -6,7 +6,7 @@
 /*   By: gallard <gallard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/09/27 16:13:55 by gallard           #+#    #+#             */
-/*   Updated: 2015/01/16 17:24:14 by gallard          ###   ########.fr       */
+/*   Updated: 2015/02/03 15:09:24 by glafitte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ typedef enum		e_case
 # define GRID_W 7
 # define GRID_H 6
 # define WIN_CNT 4
+# define WIN_LIMIT 3
 
 typedef t_case		t_grid[GRID_H][GRID_W];
 
