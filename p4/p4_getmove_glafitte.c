@@ -6,7 +6,7 @@
 /*   By: glafitte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/02/03 14:24:50 by glafitte          #+#    #+#             */
-/*   Updated: 2015/02/03 15:40:01 by glafitte         ###   ########.fr       */
+/*   Updated: 2015/02/03 16:09:31 by glafitte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ int		p4_getmove_yourlogin(t_grid *grid, t_case color, int turn_count)
 	(void)turn_count;
 	int	move;
 
-	move = 65;
+	move = 0x65;
 	return (move);
 }
