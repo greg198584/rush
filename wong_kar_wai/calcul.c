@@ -6,13 +6,13 @@
 /*   By: glafitte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/02/28 16:14:26 by glafitte          #+#    #+#             */
-/*   Updated: 2015/02/28 16:51:40 by glafitte         ###   ########.fr       */
+/*   Updated: 2015/02/28 18:57:17 by glafitte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "wkw.h"
 
-int	ft_merge_right(t_game *g)
+static int	ft_merge_right(t_game *g)
 {
 	int	i;
 	int	j;
@@ -35,7 +35,7 @@ int	ft_merge_right(t_game *g)
 	return (ft_newvalue(g));
 }
 
-int	ft_merge_left(t_game *g)
+static int	ft_merge_left(t_game *g)
 {
 	int	i;
 	int	j;
@@ -59,7 +59,7 @@ int	ft_merge_left(t_game *g)
 	return (ft_newvalue(g));
 }
 
-int	ft_merge_up(t_game *g)
+static int	ft_merge_up(t_game *g)
 {
 	int	i;
 	int	j;
@@ -82,7 +82,7 @@ int	ft_merge_up(t_game *g)
 	return (ft_newvalue(g));
 }
 
-int	ft_merge_down(t_game *g)
+static int	ft_merge_down(t_game *g)
 {
 	int	i;
 	int	j;
@@ -104,4 +104,19 @@ int	ft_merge_down(t_game *g)
 	}
 	ft_move_down(g);
 	return (ft_newvalue(g));
+}
+
+int			ft_merge(t_game *g, int move)
+{
+	if (move == RIGTH)
+		ft_merge_right(g);
+	else if (move == LEFT)
+		ft_merge_left(g);
+	else if (move == UP)
+		ft_merge_up(g);
+	else if (move == DOWN)
+		ft_merge_down(g);
+	else
+		return (-1);
+	return (ft_debug(g));
 }

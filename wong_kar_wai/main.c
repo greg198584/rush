@@ -6,13 +6,13 @@
 /*   By: glafitte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/02/28 11:15:43 by glafitte          #+#    #+#             */
-/*   Updated: 2015/02/28 16:59:36 by glafitte         ###   ########.fr       */
+/*   Updated: 2015/02/28 18:59:46 by glafitte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "wkw.h"
 
-void	ft_debug(t_game *g)
+int	ft_debug(t_game *g)
 {
 	int i;
 
@@ -24,10 +24,10 @@ void	ft_debug(t_game *g)
 		ft_fprintf(1, "%d ", g->tab[i]);
 	}
 	ft_fprintf(1, "\n---------\n");
-
+	return (0);
 }
 
-int		ft_checkvalue(t_game *g, int value)
+int	ft_checkvalue(t_game *g, int value)
 {
 	int	i;
 
@@ -38,7 +38,7 @@ int		ft_checkvalue(t_game *g, int value)
 	return (0);
 }
 
-int		ft_newvalue(t_game *g)
+int	ft_newvalue(t_game *g)
 {
 	int	value;
 	int	i;
@@ -52,7 +52,7 @@ int		ft_newvalue(t_game *g)
 	return (1);
 }
 
-int		main(void)
+int	main(void)
 {
 	t_game g;
 	int key;
@@ -87,10 +87,10 @@ int		main(void)
 		ft_fprintf(1, "Vous avez gagner\n");
 	else
 		ft_fprintf(1, "Game Over!\n");
-	//ft_merge_right(&g);
-	ft_merge_left(&g);
-	//ft_merge_up(&g);
-	//ft_merge_down(&g);
+	ft_merge(&g, RIGTH);
+	ft_merge(&g, LEFT);
+	ft_merge(&g, UP);
+	ft_merge(&g, DOWN);
 	if (g.tab != NULL)
 		free(g.tab);
 	return (0);
