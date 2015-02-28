@@ -6,7 +6,7 @@
 /*   By: glafitte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/02/28 13:35:24 by glafitte          #+#    #+#             */
-/*   Updated: 2015/02/28 15:39:26 by glafitte         ###   ########.fr       */
+/*   Updated: 2015/02/28 16:52:12 by glafitte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ int	ft_move_right(t_game *g)
 		}
 	}
 	ft_debug(g);
+	return (1);
 }
 
 int	ft_move_left(t_game *g)
@@ -70,6 +71,7 @@ int	ft_move_left(t_game *g)
 		}
 	}
 	ft_debug(g);
+	return (1);
 }
 
 int	ft_move_up(t_game *g)
@@ -100,6 +102,7 @@ int	ft_move_up(t_game *g)
 		}
 	}
 	ft_debug(g);
+	return (1);
 }
 
 int	ft_move_down(t_game *g)
@@ -130,4 +133,5 @@ int	ft_move_down(t_game *g)
 		}
 	}
 	ft_debug(g);
+	return (1);
 }

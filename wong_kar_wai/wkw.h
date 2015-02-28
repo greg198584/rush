@@ -6,7 +6,7 @@
 /*   By: glafitte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/02/28 11:21:06 by glafitte          #+#    #+#             */
-/*   Updated: 2015/02/28 13:54:31 by glafitte         ###   ########.fr       */
+/*   Updated: 2015/02/28 16:48:48 by glafitte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,9 @@ int				ft_move_right(t_game *g);
 int				ft_move_left(t_game *g);
 int				ft_move_up(t_game *g);
 int				ft_move_down(t_game *g);
+int				ft_merge_right(t_game *g);
+int				ft_merge_left(t_game *g);
+int				ft_merge_up(t_game *g);
+int				ft_merge_down(t_game *g);
 
 #endif
