@@ -44,7 +44,6 @@ static int	ft_getmaxsize(t_game *g)
         return (ret);
 }
 
-#include <unistd.h>
 int			ft_getsize(t_game *g)
 {
         int		val;

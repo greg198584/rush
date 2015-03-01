@@ -61,13 +61,14 @@ static int      ft_isvalide(void)
         return (1);
 }
 
-int             ft_init(t_game *g)
+int             ft_init(t_game *g, int squ)
 {
         int i;
 
         initscr();
         noecho();
         cbreak();
+        raw();
         curs_set(FALSE);
         keypad(stdscr, TRUE);
         if (!can_change_color() && !has_colors() && !ft_isvalide())
@@ -75,7 +76,7 @@ int             ft_init(t_game *g)
         start_color();
         ft_initcolor();
         g->f = 0;
-        g->square = 4;
+        g->square = squ;
         g->size = g->square * g->square;
         g->line = g->square;
         g->col = g->square;

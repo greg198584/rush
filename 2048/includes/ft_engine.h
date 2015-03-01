@@ -39,7 +39,7 @@ typedef struct                  s_game
         int                     tiley;
 }                               t_game;
 
-int             ft_init(t_game *g);
+int             ft_init(t_game *g, int squ);
 int             ft_getcolor(int i);
 int             ft_merge(t_game *g, int move);
 int             ft_move(t_game *g, int key);
@@ -47,6 +47,7 @@ int             ft_newvalue(t_game *g);
 int             ft_display(t_game *g);
 int             ft_getsize(t_game *g);
 int             ft_checkvalue(t_game *g, int value);
+int             ft_canmove(t_game *g, int key);
 
 int             ft_fprintf(int fd, char const *format, ...);
 
